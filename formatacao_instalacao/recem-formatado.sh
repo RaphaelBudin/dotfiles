@@ -8,6 +8,15 @@
 #		BÁSICO
 #--------------------------------------------------------- 
 
+# comando do gerenciador de pacotes para instalação (apt ou pacman)
+$install=$1
+# pular confirmação na hora da instação
+$confirmation=$2
+#comando de update
+$update=$3
+#comando de upgrade
+$upgrade=$4
+
 echo ""
 echo ""
 echo ""
@@ -16,29 +25,18 @@ echo ""
 echo ""
 echo ""
 
-#Habilita execução de todos os scripts da pasta
-sudo chmod +x *.sh
-
-#		Encontrar a mirror mais rápida do país
-#echo "Encontrando mirror mais rápida do Brasil..."
-#sleep 1
-#sudo ./apt-select-config.sh
-
-sleep 5 
-sudo apt update -y && sudo apt upgrade -y
-sleep 5 
 
 #Instala terminal ZSH 
 echo "Instalando ZSH..."
-sudo ./zsh-install.sh
+sudo ./zsh-install.sh $install $confirmation $update $upgrade
 
 echo "Instalando Git..."
-sudo apt install git -y
+sudo $install git $confirmation
 
 #Caso a distro não aceite snap (Mint), instala as configurações
 echo "Verificando se distro já tem snap..."
 sleep 1
-sudo ./snap-config.sh
+sudo ./snap-config.sh $install $confirmation $update $upgrade
 
 echo ""
 echo "Corrigindo Erro de Horário em caso de Dual Boot..."
@@ -46,6 +44,7 @@ sleep 1
 timedatectl set-local-rtc 1 --adjust-system-clock
 echo "Feito!"
 echo ""
+
 #--------------------------------------------------------- 
 #		UTILIDADES
 #--------------------------------------------------------- 
@@ -57,10 +56,10 @@ echo ""
 echo ""
 echo ""
 
-sudo apt install unzip -y
+sudo $install unzip $confirmation
 
 #Whatsapp Desktop
-sudo apt install whatsapp-desktop -y
+sudo $install whatsapp-desktop -y
 
 #Skype
 sudo snap install skype -y
@@ -78,29 +77,29 @@ echo ""
 echo ""
 
 #Instala Github Desktop
-sudo ./github-desktop.sh
+sudo ./github-desktop.sh $install $confirmation $update $upgrade
 
 #Configura chaves SSh para adicionar no Github
 echo "Configura chaves SSH para adicionar no Github"
-sudo ./git-config.sh
+sudo ./git-config.sh $install $confirmation $update $upgrade
 
 #Instala Neovim
-sudo ./neovim-install.sh
+sudo ./neovim-install.sh $install $confirmation $update $upgrade
 
 # Equivalente ao Oracle JDK para desenvolvimento Java
-sudo apt install openjdk-8-jdk -y
+sudo $install openjdk-8-jdk $confirmation
 
-#Instala o Sublime-Text última versão
-sudo apt install sublime-text -y
+# #Instala o Sublime-Text última versão
+sudo $install sublime-text $confirmation
 
 # Visual Studio Code
-sudo snap install --classic code -y
+sudo snap install --classic code
 
 # DBeaver - Conexão com Banco de Dados
-sudo apt install dbeaver-ce -y
+sudo $install dbeaver-ce $confirmation
 
 #Instala Filezilla
-sudo apt install filezilla -y
+sudo $install filezilla $confirmation
 
 #--------------------------------------------------------- 
 #		DIVERSOS
@@ -115,4 +114,4 @@ echo ""
 echo ""
 
 # Gerenciador de senhas criptografado
-sudo apt install keepassxc -y
+sudo $install keepassxc $confirmation
