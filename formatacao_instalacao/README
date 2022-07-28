@@ -1,0 +1,8 @@
+#O script de instalação precisa ser revisado
+- Aparentemente o apt-select está quebrando a parte de atualizações do sistema, verificar a utilidade dele
+- É possível que alguns scripts que fiz antigamente tenham pérolas como caminhos absolutos usando o meu nome de usuário (/home/raphael/). Fazer um GREP e procurar por 'raphael' ou 'rapha' e corrigir se necessário
+- Atualizar o Dropbox
+- Não estou confiante que meus scripts vão funcionar corretamente em novas instalaçẽos sem minha intervenção, principal o monte de programas-install.sh e programas-config.sh. Meu conhecimento de bash precisa ser aprimorado, assim como testes precisam ser feitos
+- Testar script do Neovim em um sistema recem instalado
+- Testar script do Neovim em um sistema que já o executou antes (possivelmente vai dar problema de dupliciade dos plugins) (posso usar alguma ferramenta que elimina linhas duplicada do .vimrc e .nvimrc) 
+
