@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # comando do gerenciador de pacotes para instalação (apt ou pacman)
-$install=$1
+install=$1
 # pular confirmação na hora da instação
-$confirmation=$2
+confirmation=$2
 #comando de update
-$update=$3
+update=$3
 #comando de upgrade
-$upgrade=$4
+upgrade=$4
 
 
 #Instala ZSH e deixa como shell padrão do sistema
-sudo $install zsh $confirmation
+sudo $install $confirmation zsh 
 
 #Verifica versão 
 zsh --version

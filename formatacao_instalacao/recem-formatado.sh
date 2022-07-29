@@ -9,13 +9,13 @@
 #--------------------------------------------------------- 
 
 # comando do gerenciador de pacotes para instalação (apt ou pacman)
-$install=$1
+install=$1
 # pular confirmação na hora da instação
-$confirmation=$2
+confirmation=$2
 #comando de update
-$update=$3
+update=$3
 #comando de upgrade
-$upgrade=$4
+upgrade=$4
 
 echo ""
 echo ""
@@ -96,7 +96,7 @@ sudo $install sublime-text $confirmation
 sudo snap install --classic code
 
 # DBeaver - Conexão com Banco de Dados
-sudo $install dbeaver-ce $confirmation
+sudo $install dbeaver $confirmation
 
 #Instala Filezilla
 sudo $install filezilla $confirmation

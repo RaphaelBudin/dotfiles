@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # comando do gerenciador de pacotes para instalação (apt ou pacman)
-$install=$1
+install=$1
 # pular confirmação na hora da instação
-$confirmation=$2
+confirmation=$2
 #comando de update
-$update=$3
+update=$3
 #comando de upgrade
-$upgrade=$4
+upgrade=$4
 
 #Verifica se a distro é Ubuntu
 distro=$(cat /etc/issue)
