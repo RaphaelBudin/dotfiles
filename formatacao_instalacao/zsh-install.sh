@@ -17,6 +17,16 @@ sudo $install $confirmation zsh
 zsh --version
 
 #Adiciona o zsh a lista de shells permitidas
-echo "/bin/zsh" >> /etc/shells
+#echo "/bin/zsh" >> /etc/shells
 
-#A shell padrão é definida no arquivo de configurações do usuário
+#Necessário encerrar a sessão e voltar após isso
+
+#Adiciona o Oh-my-ZSH automaticamente
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+chsh -s $(which zsh)
+
+#Instalando para todos os usuários do computador
+make install
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
