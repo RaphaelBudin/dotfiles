@@ -1,0 +1,10 @@
+A Fazer (ordem de prioridade):
+
+- Verificar se o programa existe no sistema (evitar reinstalação)
+	- Utilizar comando hash e aprender tratativa de erros
+
+- Baixar pasta do Google Drive automaticamente e colocar na Home
+
+- Aparentemente o apt-select está quebrando a parte de atualizações do sistema, verificar
+
+- Atualizar o script do Dropbox
