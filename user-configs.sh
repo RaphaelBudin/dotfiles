@@ -15,6 +15,7 @@ chsh -s $(which zsh)
 
 #Define arquivo de configuração do vim
 initvim='~/.config/nvim/init.vim'
+export EDITOR=vim
 
 #Instala alguns plugins que acho útil
 
