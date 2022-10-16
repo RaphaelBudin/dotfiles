@@ -9,3 +9,8 @@
 
 #Para teclados que não possuem as teclas \ e | 
 ~/github/dotfiles/map_kb_keys.sh
+
+#Teclados que o RGB é ativado na tecla scroll lock precisa do comando abaixo para ativar
+xset led named "Scroll Lock"
+# Para desativar, insira o comando abaixo:
+# xset -led named "Scroll Lock"
