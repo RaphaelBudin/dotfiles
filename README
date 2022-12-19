@@ -1,4 +1,4 @@
-### dotfiles para Arch e Ubuntu based
+### dotfiles para Arch e Ubuntu based ###
 
 São meus dotfiles para instalar pacotes que utilizo em instalações linux.
 
@@ -11,12 +11,12 @@ São meus dotfiles para instalar pacotes que utilizo em instalações linux.
 - Mapeamento customizado de teclas (útil para teclados americanos)
 - Scripts de inicialização específicos para os softwares / hardwares que utilizo
 
-### Habilidades aplicadas
+### Habilidades aplicadas ###
 - Criação de shell scripts / bash scripting
 - Configuração de utilitários (vim, neovim, zsh, git, github)
 - Resolução simples de problemas relacionados a Linux
 
-### Revisões Necessárias...
+### Revisões Necessárias...###
 - Script do Dropbox não está funcionando corretamente
 - O Master Script precisa de revisões, não funciona totalmente bem sem intervenção manual
 - Refatorar a parte de plugins do neovim, está propenso a erros/duplicidade caso o script seja executado 2+ vezes
