@@ -16,7 +16,7 @@ São meus dotfiles para instalar pacotes que utilizo em instalações linux.
 - Configuração de utilitários (vim, neovim, zsh, git, github)
 - Resolução simples de problemas relacionados a Linux
 
-### Revisões Necessárias...###
+### Revisões Necessárias... ###
 - Script do Dropbox não está funcionando corretamente
 - O Master Script precisa de revisões, não funciona totalmente bem sem intervenção manual
 - Refatorar a parte de plugins do neovim, está propenso a erros/duplicidade caso o script seja executado 2+ vezes
